@@ -122,14 +122,18 @@
                     ballSpeedX = -ballSpeedX;
                     if(ballY+ballSize>=playerY && ballY+ballSize<=playerY+paddleHeight/2)       //player góra
                     {
-                        ballSpeedY=Math.abs(ballSpeedY);
-                        
-                        ballSpeedY = -ballSpeedY;
                         console.log("player góra");
+                        if(ballSpeedY>0)
+                        {
+                            ballSpeedY = -ballSpeedY;
+                        }
                                                 
                     }
                     else{
-                        ballSpeedY=Math.abs(ballSpeedY);                                 //player dól
+                        if(ballSpeedY<0)
+                        {
+                            ballSpeedY = -ballSpeedY;
+                        }                                //player dól
                         console.log("player dół");        
                         }
                     
@@ -153,14 +157,18 @@
                     ballSpeedX = -ballSpeedX;
                     if(ballY+ballSize>=aiY && ballY+ballSize<=aiY+paddleHeight/2) //ai góra
                     {
-                        ballSpeedY=Math.abs(ballSpeedY);
-                        
-                        ballSpeedY = -ballSpeedY;
+                        if(ballSpeedY>0)
+                        {
+                            ballSpeedY = -ballSpeedY;
+                        }
                         console.log("ai góra");
                                                 
                     }
                     else{
-                        ballSpeedY=Math.abs(ballSpeedY);
+                        if(ballSpeedY<0)
+                        {
+                            ballSpeedY = -ballSpeedY;
+                        }
                         console.log("ai dół");                       //ai dół
                                             
                         }
